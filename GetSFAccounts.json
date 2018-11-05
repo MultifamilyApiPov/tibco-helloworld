@@ -1,0 +1,60 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "GetSFAccounts",
+    "x-lastModified": "Nov 05, 2018 12:32PM PST",
+    "description": "This API gets account names from DUS Gateway Account Object"
+  },
+  "paths": {
+    "/Accounts": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/sfAccountResponseSchema"
+              }
+            },
+            "examples": {
+              "application/json": [
+                [
+                  {
+                    "Name": "CBRE Multifamily Capital, Inc.",
+                    "Type": "Entity",
+                    "Lender_Identifier__c": "0007"
+                  }
+                ]
+              ]
+            }
+          }
+        },
+        "parameters": [],
+        "operationId": "getSFAccounts",
+        "description": "The GET HTTP Method retrieves account name with no input parameters",
+        "summary": "The GET HTTP Method retrieves account name with no input parameters"
+      }
+    }
+  },
+  "definitions": {
+    "sfAccountResponseSchema": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "Lender_Identifier__c": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
