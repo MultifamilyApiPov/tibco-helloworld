@@ -1,0 +1,16 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [{
+            "localTimestamp": 1541527471551,
+            "localURI": "/FirstSample.module/Service Descriptors/GetSFAccounts_1.0.json",
+            "disabled": false,
+            "remoteTimestamp": 1541540939000,
+            "localHash": "737f9bac71dcdeeae8abbbb5f7e654b72dcfb5ee",
+            "remoteId": "4",
+            "remoteHash": "737f9bac71dcdeeae8abbbb5f7e654b72dcfb5ee"
+        }],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": []
+}
