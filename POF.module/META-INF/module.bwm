@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_bgag8OEzEeiDgMSwg6hP4g" targetNamespace="http://tns.tibco.com/bw/composite/POF.module" name="POF.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_Kb07UOHzEeiDgMSwg6hP4g" name="Accounts" promote="ComponentProcess/Accounts">
+    <sca:interface.wsdl xmi:id="_KcCWsOHzEeiDgMSwg6hP4g" interface="http://xmlns.example.com/20181105144606PLT#wsdl.interface(Accounts)" scaext:wsdlLocation="../Processes/pof/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_KcS1YOHzEeiDgMSwg6hP4g" name="RestService" path="/Accounts" docBasePath="http://localhost:7777/POF.module" docResourcePath="Accounts" basePath="/" connector="pof.module.Process" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/GetSFAccounts_1.0.json">
+      <operation xmi:id="_KcY8AOHzEeiDgMSwg6hP4g" operationName="get" nickname="getAccounts" httpMethod="GET" notes="The GET HTTP Method retrieves account name with no input parameters" responseStyle="element">
+        <clientFormat>json</clientFormat>
+      </operation>
+      <parameters xmi:id="_Kdcr8OHzEeiDgMSwg6hP4g"/>
+      <advancedConfig xmi:id="_KcXG0OHzEeiDgMSwg6hP4g" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_KcY8AeHzEeiDgMSwg6hP4g" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_cN55EOEzEeiDgMSwg6hP4g" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cOGtYOEzEeiDgMSwg6hP4g" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cOKXwOEzEeiDgMSwg6hP4g" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cOPQQOEzEeiDgMSwg6hP4g" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cOUIwOEzEeiDgMSwg6hP4g" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cOYaMOEzEeiDgMSwg6hP4g" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VnfwUOE0EeiDgMSwg6hP4g" name="salesforce.wsdl" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_b8upgOEzEeiDgMSwg6hP4g" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_b8v3oOEzEeiDgMSwg6hP4g" processName="pof.module.Process"/>
+    <sca:service xmi:id="_KblDsOHzEeiDgMSwg6hP4g" name="Accounts">
+      <sca:interface.wsdl xmi:id="_KbsYcOHzEeiDgMSwg6hP4g" interface="http://xmlns.example.com/20181105144606PLT#wsdl.interface(Accounts)" scaext:wsdlLocation="../Processes/pof/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

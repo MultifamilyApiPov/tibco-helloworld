@@ -1,0 +1,61 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "GetSFAccounts",
+    "x-lastModified": "Nov 06, 2018 08:48AM PST",
+    "description": "This API gets account names from DUS Gateway Account Object"
+  },
+  "paths": {
+    "/Accounts": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/sfAccountResponseSchema"
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "Name": "Sample",
+                  "Type": "Entity",
+                  "LenderIdentifier": "LenderId"
+                }
+              ]
+            }
+          }
+        },
+        "parameters": [],
+        "operationId": "getAccounts",
+        "summary": "The GET HTTP Method retrieves account name with no input parameters",
+        "description": "The GET HTTP Method retrieves account name with no input parameters"
+      }
+    }
+  },
+  "definitions": {
+    "sfAccountResponseSchema": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "default": "Sample"
+          },
+          "Type": {
+            "type": "string",
+            "default": "Entity"
+          },
+          "LenderIdentifier": {
+            "type": "string",
+            "default": "LenderId"
+          }
+        }
+      }
+    }
+  }
+}
